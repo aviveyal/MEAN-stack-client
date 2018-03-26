@@ -1,0 +1,17 @@
+<br><br>
+<div *ngIf="artistName">
+  <h2 class="page-header">Artist name : {{artistName}}</h2>
+</div>
+<br>
+<div>
+<form class="songForm" (keyup.enter)="addSong($event)">
+    <div class="form-group">
+        <input type="text" [(ngModel)]="name" name="name" class="form-control" placeholder="song name" >
+        <input type="text" [(ngModel)]="length" name="length" class="form-control" placeholder="length (format - mm:mm / m:mm)" >
+        <input type="text" [(ngModel)]="album" name="album" class="form-control" placeholder="album" >
+        <input type="text" [(ngModel)]="songImage" name="songImage" class="form-control" placeholder="song Image" >
+    </div>
+  <button (click)="addSong($event)" type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+<br>

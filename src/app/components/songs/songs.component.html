@@ -1,0 +1,10 @@
+<br>
+<app-song-search></app-song-search>
+<div class="row">
+    <div  *ngFor= "let song of songs;" class="col-md-4">
+    <app-song-item [song]="song" (notifyParent)="deleteSong($event)" ></app-song-item>
+
+     <br>
+     </div>
+
+    </div>
