@@ -1,0 +1,18 @@
+<div *ngIf="loggedInID==artistID">
+<br><br>
+<h2 class="page-header">Update song :</h2>
+<br>
+<form class="songForm" (keyup.enter)="updateSong()">
+  <div class="form-group">
+    <input type="text" [(ngModel)]="name" name="name" class="form-control" placeholder="song name" >
+    <input type="text" [(ngModel)]="length" name="length" class="form-control" placeholder="length" >
+    <input type="text" [(ngModel)]="album" name="album" class="form-control" placeholder="album" >
+    <input type="text" [(ngModel)]="songImage" name="songImage" class="form-control" placeholder="song Image" >
+  </div>
+  <button (click)="updateSong()" type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+<div *ngIf="loggedInID!=artistID">
+  <!--<br>-->
+  <!--<h2 class="page-header">Unauthorized access</h2>-->
+</div>

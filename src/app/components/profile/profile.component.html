@@ -1,0 +1,36 @@
+<br><br>
+<div *ngIf="user">
+  <h2 class="page-header">{{user.name}}</h2>
+  <br>
+  <ul class="list-group">
+    <li class="list-group-item"><b>Username : </b>{{user.username}}</li>
+    <li class="list-group-item"><b>Email : </b>{{user.email}}</li>
+    <li class="list-group-item"><b>Artist name : </b>{{user.artistName}}</li>
+  </ul>
+</div>
+<br>
+
+<h2 class="page-header">Most Played Song</h2>
+<hr>
+<div class="row">
+<div *ngIf="topSong" class="col-md-4">
+  <div align="center" style="color: #009b5e"><b>Played {{playedCount}} times</b></div>
+  <app-song-item [song]="topSong" (notifyParent)="deleteSong($event)"></app-song-item>
+</div>
+</div>
+
+
+<br>
+<h2 class="page-header">My songs :</h2>
+<hr>
+<div class="row">
+
+  <div  *ngFor="let song of songs" class="col-md-4">
+    <app-song-item [song]="song" (notifyParent)="deleteSong($event)"></app-song-item>
+    <br>
+  </div>
+
+
+</div>
+<br>
+<br>

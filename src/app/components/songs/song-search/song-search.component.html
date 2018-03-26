@@ -1,0 +1,18 @@
+<h4>Search</h4>
+<hr>
+<form class="form-inline" (ngSubmit)="Search($event)">
+
+  <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" [(ngModel)]="songName" name="songName" id="inlineFormInput" placeholder="Song name">
+
+
+  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+    <input type="text" class="form-control" [(ngModel)]="album" name="album" id="inlineFormInputGroup" placeholder="Album Name">
+  </div>
+
+  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+    <input type="text" class="form-control" [(ngModel)]="length" name="length" id="inlineFormInputGroup2" placeholder="Song Length">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<br>

@@ -1,0 +1,10 @@
+
+@font-face {
+  font-family: 'FontName'; /*a name to be used later*/
+  src: url('http://domain.com/fonts/font.ttf'); /*URL to font*/
+}
+h1 {
+  text-shadow: 1px 1px grey;
+    font-family:FontName ;
+
+}

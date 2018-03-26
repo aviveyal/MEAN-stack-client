@@ -1,0 +1,57 @@
+
+
+<!--//////////-->
+<div class="row">
+<video autoplay muted loop id="myVideo">
+  <source src="https://storage.googleapis.com/coverr-main/mp4/Broadwaycrew.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="text-center">
+      <div class="lead">
+        <h2>Beat Blocks App</h2>
+        <p class="HeadSmall">Welcome to Beat Blocks</p>
+        <div *ngIf="!authService.loggedIn()">
+          <div>
+            <a class="btn btn-primary" [routerLink]="['/register']">Register</a>
+            <a class="btn btn-default" [routerLink]="['/login']">Login</a>
+          </div>
+        </div>
+<!--////////////////////-->
+        <div class="row">
+          <div class="col-md-2">
+            <h1 class="page-header"> Weather</h1>
+            <app-weather-widget></app-weather-widget>
+          </div>
+          <div class="col-md-10">
+            <app-satistics-doughnut></app-satistics-doughnut>
+            <br>
+            <div align="center">
+            </div>
+
+          </div>
+      </div>
+
+        <!--/////////////////////-->
+
+        <div align="center">
+          <app-statistics-bar></app-statistics-bar>
+        </div>
+
+        <div align="center">
+          <canvas #myCanvas width="500" height="500">
+          </canvas>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+

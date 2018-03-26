@@ -1,0 +1,24 @@
+#myVideo {
+  left: 0;
+  position: fixed;
+  width: 100%;
+  /*padding-bottom: 0;*/
+}
+
+
+
+.lead{
+  background-color: #eeeeee;
+  opacity:0.8;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  max-height: 100%;
+}
+
+.col-md-2{
+  width:100%;
+  padding-left: 50px;
+  padding-bottom: 50px;
+}
+

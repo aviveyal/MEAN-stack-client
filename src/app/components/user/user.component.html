@@ -1,0 +1,48 @@
+<br>
+<h2> Top 3 - Number of songs uploaded by user</h2>
+<br>
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <td><b>Name</b></td>
+    <td><b>Artist name</b></td>
+    <td><b>Username</b></td>
+    <td><b>Songs uploaded</b></td>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of sortedUsers" >
+    <td>{{user?.name}}</td>
+    <td>{{user?.artistName}}</td>
+    <td>{{user?.username}}</td>
+    <td>{{user?.password}}</td> <!--shows songs count -->
+  </tr>
+
+  </tbody>
+</table>
+<br><br>
+<h2>All Beat Blocks users :</h2>
+<br>
+<app-user-search></app-user-search>
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <td><b>Name</b></td>
+    <td><b>Artist name</b></td>
+    <td><b>Username</b></td>
+    <td><b>Email</b></td>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of Users" >
+    <td>{{user?.name}}</td>
+    <td>{{user?.artistName}}</td>
+    <td>{{user?.username}}</td>
+    <td>{{user?.email}}</td>
+
+  </tr>
+  </tbody>
+</table>
